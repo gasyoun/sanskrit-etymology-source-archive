@@ -14,6 +14,11 @@ Live teaching view: <https://gasyoun.github.io/wiki/> ·
 [Timeline](https://gasyoun.github.io/wiki/timeline.html) ·
 Companion archive page: <https://gasyoun.github.io/wiki/archive/>
 
+Russian edition of the teaching view: <https://gasyoun.github.io/wiki/ru/>
+(including its [archive page](https://gasyoun.github.io/wiki/ru/archive/)).
+It reads the same snapshot described below; the Russian files contain only
+translated interface strings, not a second copy of the source data.
+
 ## Why one page was not enough
 
 The parent category contains **no word pages at all** — only 42
