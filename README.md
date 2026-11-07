@@ -12,6 +12,8 @@ Live teaching view: <https://gasyoun.github.io/wiki/> ·
 [Explorer](https://gasyoun.github.io/wiki/explorer.html) ·
 [Cognate map](https://gasyoun.github.io/wiki/cognates.html) ·
 [Timeline](https://gasyoun.github.io/wiki/timeline.html) ·
+[Dhātu desk](https://gasyoun.github.io/wiki/dhatu.html) ·
+[Word formation](https://gasyoun.github.io/wiki/wordformation.html) ·
 Companion archive page: <https://gasyoun.github.io/wiki/archive/>
 
 Russian edition of the teaching view: <https://gasyoun.github.io/wiki/ru/>
@@ -36,10 +38,13 @@ level down: **5426 titles** in total.
 | `raw/subcategories.json` | MediaWiki API listing of the 42 subcategories. |
 | `raw/subcategory-members.json` | Each subcategory mapped to its direct children and word pages. |
 | `raw/cognates.json` | Member lists of 114 per-language PIE root/word categories and 4 inheritance layers. |
+| `raw/formation-sources.json` | Replayable provenance record for the prior-work word-formation join: 9 input datasets, converter validation, all generated payloads. |
 | `cognates-manifest.json` | Exact source URL for each of the 118 queried Wiktionary categories. |
-| `manifest.json` | Source URLs, UTC timestamp, byte sizes and SHA-256 for all 7 archived files. |
+| `formation-manifest.json` | Provenance, licences, converter validation and checksums for the 9 prior-work inputs and 3 derived data modules. |
+| `SOURCES-LICENSES.md` | Mixed-licence attribution for all nine prior-work datasets; documents the deliberate exclusion of CC BY-NC Zalizniak/Fasmer data. |
+| `manifest.json` | Source URLs, UTC timestamp, byte sizes and SHA-256 for all 9 archived files. |
 | `CHECKSUMS.txt` | Standard `shasum -c` verification file. |
-| `SNAPSHOT.md` | Complete human-readable record: all 42 categories, counts, links, descriptions, derived data. |
+| `SNAPSHOT.md` | Complete human-readable record: all 42 categories, counts, links, descriptions, derived data, prior-work join section. |
 
 Snapshot id: `sanskrit-etymology-2026-11-07` · taken 2026-11-07T05:14:14Z.
 The cognate half of the snapshot was fetched at 2026-11-07T05:37:53Z; each
@@ -63,11 +68,13 @@ The crawl is one level deep: it captures direct members of the 42
 subcategories, not the full contents of the 2,005 nested buckets.
 
 To refresh, run `wiki/scripts/fetch_cognates.py` then
-`wiki/scripts/fetch_snapshot.py` in
+`wiki/scripts/fetch_snapshot.py` then `wiki/scripts/build_formation.py` in
 [gasyoun/gasyoun.github.io](https://github.com/gasyoun/gasyoun.github.io) and
 copy the regenerated `wiki/archive/` contents here. `fetch_snapshot.py
 --offline` rebuilds all derived files from these raw bytes with no network,
-preserving the original timestamp and checksums.
+preserving the original timestamp and checksums. `build_formation.py --offline`
+replays the formation join from `raw/formation-sources.json` without the source
+repositories.
 
 ## Rights
 
