@@ -1,0 +1,7 @@
+# Verify: shasum -a 256 -c CHECKSUMS.txt
+
+d5486b29ae715dc5d71ca9a477a713b7742d490fa5f52242cf63b85602d650dc  raw/category.html
+b8e69b6f6ad71e53e7991b2d7624a6bc80a88a9d269d405d71d9afb7a3ca133a  raw/subcategories.json
+cea7d965c24b123912be8ca860f08e21dfa9d49bb3f12b0e04b105851f09d276  raw/category-wikitext.json
+1dc0aadb8746eda077c50545151e1341c7a1d26dd693d059fbc1230fa5dbe3ef  raw/category-rendered.json
+c7862fda12775adc7ed4aa70e54bfff927913b2f983e79a721d059e4460d6900  raw/subcategory-members.json
